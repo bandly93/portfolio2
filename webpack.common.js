@@ -1,13 +1,12 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const devMode = process.env.NODE_ENV !== 'production';
-
 
 //A common webpack file that all other webpack share.
 module.exports = {
 	output : {
 		filename : '[name]-bundle.js',
 		path : path.resolve(__dirname,'dist'),
+		publicPath: '/',
 	},
 	module : {
 		rules : [
@@ -17,33 +16,31 @@ module.exports = {
 				use : [
 					{ 
 						loader : 'babel-loader',
-					},
+						options : {
+							babelrc: false,
+							presets : ['@babel/preset-react','@babel/preset-env'],
+							plugins : ['@babel/plugin-proposal-class-properties']
+						}
+					}
 				],	
 			},
 			{
 				test : /\.css$/,
 				use : [
-					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+				 MiniCssExtractPlugin.loader,
 					'css-loader',
 				],
 			},
 			{
 				test : /\.(jpg|png|gif|svg)$/,
-				use : [
-					{
-						loader : 'file-loader',
-						options : {
-							name : 'images/[name].[ext]',		
-						},
-					},
-				],
+				use : [{ loader : 'file-loader', options : { name : 'images/[name].[ext]'}}],
 			},
 		],
 	},
 	plugins : [
 		new MiniCssExtractPlugin({
-			filename : devMode ? '[name].css' : '[name].[hash].css',
-			chunkFilename : devMode ? '[id].css' : '[id].[hash].css',
+			filename : "[name]-bundle.css",
+			chunkFilename : "[id].css",	
 		}),
 	],
 }
