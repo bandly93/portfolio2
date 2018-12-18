@@ -23,17 +23,12 @@ module.exports = {
 						}
 					}
 				],	
-			},
-			{
+			},{
 				test : /\.css$/,
-				use : [
-				 MiniCssExtractPlugin.loader,
-					'css-loader',
-				],
-			},
-			{
-				test : /\.(jpg|png|gif|svg)$/,
-				use : [{ loader : 'file-loader', options : { name : 'images/[name].[ext]'}}],
+				use : [MiniCssExtractPlugin.loader,'css-loader']
+			},{
+				test : /\.(jpg|png|gif|svg|pdf)$/,
+				use : [{ loader : 'file-loader', options : { name : 'images/[name].[ext]'}}]
 			},
 		],
 	},

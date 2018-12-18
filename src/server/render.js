@@ -27,6 +27,7 @@ export const renderFullPage = (html, preloadedState) => `
 				<meta name = 'description' content = 'placeholder'>
 				<link rel ="stylesheet" href = "/client-bundle.css">
 				<link rel="icon" href="data:;base64,iVBORwOKGO=">
+				<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro" rel="stylesheet">
 			</head>
 			<body>
 				<div id="root">${html}</div>

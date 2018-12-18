@@ -16,7 +16,7 @@ module.exports = merge(common,{
 		inline:true,
 		proxy : {
 			'**' : {
-				target : 'http://[::1]:3003',
+				target : 'http://[::1]:3004',
 				changeOrigin : true,
 				secure : false,
 			}

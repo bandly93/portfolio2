@@ -1,3 +1,18 @@
 html{
+	color:white !important;
+	background-color : #222222;
+	font-family : 'Roboto', sans-serif;
+}
+
+a{
+	color:white;
+	text-decoration:none;
+}
+
+a:visited{
+	color: white;
+}
+
+a:hover{
 	color:red;
 }

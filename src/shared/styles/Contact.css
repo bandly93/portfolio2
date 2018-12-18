@@ -1,0 +1,49 @@
+#contact{
+	display:flex;
+	background-color:#eaeaea;
+	color:black;
+}
+
+#contact-top, #contact-textbox{
+	text-align :center;
+}
+
+@media only screen and (min-width : 800px){
+	#inner-contact{
+		margin : 0 25% !important;
+	}
+}
+
+#contact div{
+	flex:1;
+	margin: 3vw;
+}
+
+.sim input, .sim textarea{
+	padding:2%;
+	border-radius : 5px;
+	border-style:none;
+	border : 1px solid #dbd9d9;
+}
+
+#contact-input {
+	display:flex;
+}
+
+#contact-submit input{
+	font-size:15px;
+	border-radius : 25px;
+	padding:2%;
+}
+
+#contact-textbox textarea{
+	font-size:15px;
+	width:100%;
+	background-color: #E0E0E0;
+}
+
+#contact input{
+	margin-right : 2%;
+	width:40%;
+	background-color :#E0E0E0;
+}
