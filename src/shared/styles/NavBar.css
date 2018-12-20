@@ -1,8 +1,8 @@
 #navbar{
 	font-weight:bold;
+	background :#353333;
 	border-radius:10px;
 	display:flex;
-	height: 7vh;
 	font-family : 'Source Code Pro', monospace;
 }
 
@@ -15,6 +15,20 @@
 }	
 
 #navbar div{
-	margin: 0 10px;
+	margin: 5px 10px;
 	align-self : center;	
+}
+
+#hamburger-icon{
+	display:inherit;
+	height:40px;
+	margin:auto;
+	cursor:pointer;
+}
+
+
+@media only screen and (max-width: 800px){
+	#navbar-right{
+		display:none;
+	}
 }
