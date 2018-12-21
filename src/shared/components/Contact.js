@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { ContactArray } from '../data/contactData';
-//import GoogleMap from './GoogleMap';
+import { sendData } from '../redux/fetchThunk';
 import '../styles/Contact.css';
 
 class Contact extends Component{
@@ -25,6 +25,8 @@ class Contact extends Component{
 
 	handleSubmit = (e) => {
 		e.preventDefault();
+		sendData('/email','POST',this.state);
+		this.setInitialState();
 	}
 
 	updateState = (e) => {
@@ -92,5 +94,6 @@ class Contact extends Component{
 		</div>
 	}
 }
+
 
 export default Contact;

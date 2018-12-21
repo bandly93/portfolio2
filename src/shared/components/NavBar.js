@@ -66,7 +66,6 @@ class NavBar extends Component{
 	</div>
 
 	render(){
-		console.log(this.state);
 		return<Fragment>
 			{this.navbar()}
 			<Switch> 
