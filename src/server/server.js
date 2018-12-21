@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(morgan('dev'));
 app.use(expressStaticGzip('dist',{enableBrotli:true}));
+
+const emailRouter = require('./routes/emailRouter.js');
+app.use('/email',emailRouter);
 app.use(handleRender);
 
 app.listen(port, () => {
