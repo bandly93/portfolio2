@@ -30,7 +30,7 @@ class NavBar extends Component{
 		key = {i}
 	/>)
 
-	navHome = () => <div>
+	navHome = () => <div onClick = {this.handleClick}>
 		<Link to = '/'> BLCODER </Link>
 	</div>
 	
@@ -74,21 +74,5 @@ class NavBar extends Component{
 		</Fragment>
 	}
 }
-
-/*
-const mapStateToProps = (state) => {
-	
-}
-
-const mapDispatchToProps = {
-	
-}
-
-NavBar.propTypes = {	
-	
-}
-*/
-
-//export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Navbar));
 
 export default withRouter(NavBar);
