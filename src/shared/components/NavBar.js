@@ -15,8 +15,13 @@ class NavBar extends Component{
 	constructor(){
 		super()
 		this.state = {
-			active : 'false',
+			clicked : false,
 		}
+	}
+
+	handleClick = () => {
+		const { clicked } = this.state;
+		this.setState({clicked:!clicked});
 	}
 
 	routes = () => RoutesArray.map((route,i) => <Route 
@@ -25,36 +30,47 @@ class NavBar extends Component{
 		key = {i}
 	/>)
 
-	navbarRight = () => <Fragment>
-		<div><Link to = '/projects'> PROJECTS </Link></div>
-		<div><Link to = '/contact'> CONTACT </Link></div>
-		<div><Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link></div>
-		<div><Link to = '//www.linkedin.com/in/bandly' target = '_blank'> LINKEDIN </Link></div>
-		<div><Link to = '/resume'> RESUME </Link></div>	
-	</Fragment>
+	navHome = () => <div>
+		<Link to = '/'> BLCODER </Link>
+	</div>
+	
+	navbarRight = () => {
+		const { clicked } = this.state;
+		return <div id = 'nav-right' className = { clicked? 'show' : 'hide'} onClick = {this.handleClick}>
+			<div><Link to = '/projects'> PROJECTS </Link></div>
+			<div><Link to = '/contact'> CONTACT </Link></div>
+			<div><Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link></div>
+			<div><Link to = '//www.linkedin.com/in/bandly' target = '_blank'> LINKEDIN </Link></div>
+			<div><Link to = '/resume'> RESUME </Link></div>	
+		</div>
+	}
 
-	hamburger = () => <div>
-		<img id = 'hamburger-icon' src = '../images/hamburger.svg' />
+	hamburger = () => {
+		const { clicked } = this.state;
+		return 	<div id = 'nav-hamburger' className = {clicked? 'hide' : 'show'}>
+			<img 
+				onClick = {this.handleClick}
+				id = 'hamburger-icon'
+				src = '../images/hamburger.svg' />
+		</div>
+	}
+
+	navbar = () => <div id = 'navbar'>
+		<div id = 'navbar-left'>
+			{this.navHome()}
+		</div>
+		<div id ='navbar-right'>
+			{this.navbarRight()}
+			{this.hamburger()}	
+		</div>
 	</div>
 
-		
-	navbar = () => (
-		<div id = 'navbar'>
-			<div id = 'navbar-left'>
-				<div><Link to ='/'> BLCODER </Link></div>
-			</div>
-			<div id ='navbar-right'>
-				{this.navbarRight()}
-			</div>
-		</div>
-	)
-
-
 	render(){
+		console.log(this.state);
 		return<Fragment>
 			{this.navbar()}
 			<Switch> 
-				{ this.routes() } 
+				{this.routes()} 
 			</Switch>
 		</Fragment>
 	}

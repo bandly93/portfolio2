@@ -26,9 +26,29 @@
 	cursor:pointer;
 }
 
+#nav-hamburger{
+	display:none;
+}
+
+#nav-right{
+	display:flex;
+}
+
 
 @media only screen and (max-width: 800px){
-	#navbar-right{
+	.show{
+		display:grid !important;
+	}
+
+	.hide{
+		display:none !important;
+	}	
+	
+	#nav-right{
 		display:none;
 	}
+
+	#nav-hamburger{
+		display:grid;
+	}	
 }
