@@ -1,5 +1,11 @@
-.react-pdf__Page__canvas{
-	width: 90vw !important;
-	height : auto !important;
-	margin: 5%;
+#resume{
+	width:90vw;
+	margin:2% 5%;
+}
+
+@media only screen and (min-width: 800px){
+	#resume{
+		width:70vw;
+		margin: 2% 15%;
+	}
 }
