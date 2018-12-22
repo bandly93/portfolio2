@@ -8,7 +8,6 @@ import {
 	Switch,
 	withRouter 
 } from 'react-router-dom';
-import { connect } from 'react-redux';
 import '../styles/NavBar.css';
 
 class NavBar extends Component{
@@ -17,6 +16,11 @@ class NavBar extends Component{
 		this.state = {
 			clicked : false,
 		}
+	}
+	
+	clickHome = () =>{
+		const { clicked } = this.state;
+		this.setState({clicked:false});
 	}
 
 	handleClick = () => {
@@ -30,7 +34,7 @@ class NavBar extends Component{
 		key = {i}
 	/>)
 
-	navHome = () => <div onClick = {this.handleClick}>
+	navHome = () => <div onClick = {this.clickHome}>
 		<Link to = '/'> BLCODER </Link>
 	</div>
 	
