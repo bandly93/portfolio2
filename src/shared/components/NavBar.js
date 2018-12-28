@@ -24,6 +24,9 @@ class NavBar extends Component{
 	}
 
 	handleClick = () => {
+
+
+
 		const { clicked } = this.state;
 		this.setState({clicked:!clicked});
 	}
