@@ -54,6 +54,7 @@ class NavBar extends Component{
 		return 	<div id = 'nav-hamburger' className = {clicked? 'hide' : 'show'}>
 			<img 
 				onClick = {this.handleClick}
+
 				id = 'hamburger-icon'
 				src = '../images/hamburger.svg' />
 		</div>

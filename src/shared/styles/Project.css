@@ -1,32 +1,34 @@
+
+/* Middle size screen */
 @media only screen and (min-width:500px) and ( max-width: 1000px){
-	#project-wrapper {
+	.project-wrapper {
 		display:block;
 	}
-	
-	#project-div{
-		display:flex;
-	}
-	
-	#project-div div{ 
-		flex:1;
-	}
 }
 
+
+/* Large size screen */
 @media only screen and (min-width : 1001px){
-	#project-wrapper{
+	.project-wrapper{
 		display:flex;
 	}
 }
 
-#project-wrapper img{
+
+/* Common */
+
+.project-img:hover{
+	opacity:0.3;	
+}
+
+
+
+
+.project-wrapper img{
 	width:100%;
 }
 
-#project-div{
-	border:1px solid grey;
-}
-
-#project-wrapper div{
+.project-wrapper div{
 	flex:1;
 }
 
