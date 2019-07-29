@@ -1,12 +1,22 @@
-let placeholder = '//via.placeholder.com/150';
-let usePH = false;
-let fitnessImg = '../images/fitnesstrackr.png';
-let volcanoImg = '../images/volcano.png';
-let yelpImg = '../images/yelpcamp.png';
+import fitnessImg from '../images/fitnesstrackr.png';
+import volcanoImg from '../images/volcano.png';
+import yelpImg from '../images/yelpcamp.png';
+import dockImg from '../images/dockpad.png';
 
 export const ProjectArray = [
+	{
+		img : dockImg,
+		imageFolder : "DockPad",
+		title : 'DockPad.io',
+		subTitle: 'The solution to efficient project management.',
+		technologies : 'Stack : React.js, Redux.js, Google Firebase, Google Material UI',
+		status : 'Initial MVP stage',
+		url : '//dockpad.io',
+		githubUrl : null,
+	},
 	{	
-		img : usePH ? placeholder : fitnessImg,
+		img : fitnessImg,
+		imageFolder : "Fitness",
 		title : 'FitnessTrackr',
 		subTitle : 'Simple approach to tracking macronutrients intake.',
 		technologies : "Stack : React.js, Node.js, Express.js, Passport.js, and PostgreSQL.",
@@ -14,7 +24,8 @@ export const ProjectArray = [
 		url : '//fit.blcoder.com',
 		githubUrl : '//github.com/bandly93/fitnessTracker',
 	},{
-		img : usePH? placeholder : volcanoImg,
+		img : volcanoImg,
+		imageFolder : "Volcano",
 		title : 'VB Productions',
 		subTitle : 'Photography webapp for multimedia production company.',
 		technologies : "Stack : React.js, Node.js, Express.js, and MongoDB.",
@@ -22,7 +33,8 @@ export const ProjectArray = [
 		url : '//vp.blcoder.com/h/multimedia',
 		githubUrl : '//github.com/bandly93/volcano',
 	},{
-		img : usePH ? placeholder : yelpImg,
+		img : yelpImg,
+		imageFolder : "Yelp",
 		title : 'YelpCamp',
 		subTitle : 'Mock media service app similar to Instagram or Flickr.',
 		technologies : "Stack : Node.js, Express.js, Passport.js, Heroku, and mLab.",

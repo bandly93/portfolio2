@@ -1,6 +1,7 @@
 import React, { Component,Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { RoutesArray } from '../data/navBarData';
+import hamburger from '../images/hamburger.svg';
 import { 
 	BrowserRouter as Router,
 	Route,
@@ -57,9 +58,8 @@ class NavBar extends Component{
 		return 	<div id = 'nav-hamburger' className = {clicked? 'hide' : 'show'}>
 			<img 
 				onClick = {this.handleClick}
-
 				id = 'hamburger-icon'
-				src = '../images/hamburger.svg' />
+				src = {hamburger} />
 		</div>
 	}
 
