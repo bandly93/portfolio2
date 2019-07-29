@@ -10,26 +10,32 @@
 /* Large size screen */
 @media only screen and (min-width : 1001px){
 	.project-wrapper{
-		display:flex;
+		display:block;
 	}
 }
 
-
 /* Common */
+.project-wrapper{
+	margin: 3% 25%;
+	border-radius : 25px;
+}
 
 .project-img:hover{
 	opacity:0.3;	
 }
 
-
-
-
 .project-wrapper img{
 	width:100%;
+	border-radius : 25px;
+	
 }
 
 .project-wrapper div{
-	flex:1;
+	flex:1;	
+}
+
+.project-wrapper a{
+	color: black !important;
 }
 
 .grey-out{
