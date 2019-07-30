@@ -3,12 +3,24 @@ body{
 }
 
 .home-container{
-	text-align:center;
+	text-align:center;	
 }
+
+.bg-img img{
+	width : 25vw;
+	top : 50%;
+	left: 50%;
+
+}
+
+
+.top-home h1, .top-home h2,.top-home h3{
+	background:white;
+}
+
 
 .top-home{
 	font-size: 2em;
-	padding-top : 15vh;
 	height: 80vh;
 }
 
