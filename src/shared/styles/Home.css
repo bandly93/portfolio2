@@ -1,14 +1,39 @@
-#home-top{
-
+body{
+	margin : 1%;
 }
 
-
-#home-middle{
-
+.home-container{
+	text-align:center;
 }
 
-
-#home-bottom{
-
+.top-home{
+	font-size: 2em;
+	padding-top : 15vh;
+	height: 80vh;
 }
 
+.homeLink{
+	padding : 1% 2%;
+	border-radius : 35px;
+}
+
+.homeLink a{
+	color : black !important;
+}
+
+.homeDiv div{
+	display:block;
+	margin: 0 auto;
+}
+
+.homeDiv ul{
+	list-style: none;
+	flex:1;
+	padding : 0;
+}
+
+.homeDiv li{
+	display:inline-block;
+	border-radius: 25px;
+	padding : 3%;
+}
