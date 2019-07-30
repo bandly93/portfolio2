@@ -15,14 +15,19 @@
 }
 
 /* Common */
+
 .project-wrapper{
 	margin: 3% 25%;
 	border-radius : 25px;
 }
 
-.project-img:hover{
-	opacity:0.3;	
+.project-wrapper a{
+	padding-right : 2%;
+	float:right;
+	height:2em;
 }
+
+
 
 .project-wrapper img{
 	width:100%;
