@@ -11,17 +11,17 @@ export const RoutesArray = [
 	},	
 	{
 		url : '/projects',
-		text : 'PROJECTS',
+		text : 'Projects',
 		component : Projects,
 	},
 	{
 		url : '/contact',
-		text : 'CONTACT',
+		text : 'Contact',
 		component : Contact,
 	},
 	{
 		url : '/resume',
-		text : 'RESUME',
+		text : 'Reume',
 		component : Resume,
 	},
 ];

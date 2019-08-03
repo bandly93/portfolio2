@@ -28,7 +28,8 @@ export const renderFullPage = (html, preloadedState) => `
 				<meta name = 'description' content = 'Need a Web Developer?'>
 				<link rel ="stylesheet" href = "/client-bundle.css">
 				<link rel="icon" href="data:;base64,iVBORwOKGO=">
-				<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro|Karla|PT+Sans" rel="stylesheet">
+
 				<script src="https://kit.fontawesome.com/366dca4976.js"></script>
 
 				<link href="dist/hamburgers.css" rel="stylesheet">

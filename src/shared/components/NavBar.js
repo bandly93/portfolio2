@@ -45,11 +45,11 @@ class NavBar extends Component{
 	navbarRight = () => {
 		const { clicked } = this.state;
 		return <div id = 'nav-right' className = { clicked? 'show' : 'hide'} onClick = {this.handleClick}>
-			<div><Link to = '/projects'> PROJECTS </Link></div>
-			<div><Link to = '/contact'> CONTACT </Link></div>
-			<div><Link to = '//www.github.com/bandly93' target = '_blank'> GITHUB </Link></div>
-			<div><Link to = '//www.linkedin.com/in/bandly' target = '_blank'> LINKEDIN </Link></div>
-			<div><Link to = '/resume'> RESUME </Link></div>	
+			<div><Link to = '/projects'> Projects </Link></div>
+			<div><Link to = '/contact'> Contact </Link></div>
+			<div><Link to = '//www.github.com/bandly93' target = '_blank'> Github </Link></div>
+			<div><Link to = '//www.linkedin.com/in/bandly' target = '_blank'> LinkedIn </Link></div>
+			<div><Link to = '/resume'> Resume </Link></div>	
 		</div>
 	}
 

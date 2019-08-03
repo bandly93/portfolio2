@@ -1,11 +1,12 @@
 #navbar{
-	font-weight:bold;
+	font-weight:lighter;
 	background :#353333;
-	border-radius:10px;
 	display:flex;
-	font-family : 'Source Code Pro', monospace;
+	font-size:0.8em;
+	position: fixed;
+	width:100%;
+	top:0;
 }
-
 #navbar-right, #navbar-left{
 	flex:1;
 }
@@ -32,6 +33,10 @@
 
 #nav-right{
 	display:flex;
+}
+
+#nav-right a{
+	margin :5px;
 }
 
 
