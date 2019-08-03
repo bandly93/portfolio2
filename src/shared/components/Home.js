@@ -12,9 +12,8 @@ class Home extends Component{
 	</div>
 	
 	main = () => <div className = 'top-home'>
-		<h1> Hello, my name is Band Ly.</h1>
+		<h1> Hello, I'm Band Ly.</h1>
 		<h2> I'm a self taught full-stack web developer.</h2>
-		<h3> Rooted in Oakland, CA. </h3>
 		<button className = 'homeLink'> <Link to = '/projects'> View Projects </Link></button>
 	</div>
 
@@ -36,8 +35,10 @@ class Home extends Component{
 			{this.main()}
 			<div className = 'homeDiv'>
 				{this.renderBanner("Main Stack")}
+				<hr/>
 				<div id = "stackDesc"> {this.mapArray(stackData)}</div>	
 				{this.renderBanner("Languages")}
+				<hr />
 				<div id = "longData"> {this.mapArray(langData)}</div> 
 			</div>
 		</div>

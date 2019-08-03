@@ -1,23 +1,20 @@
-body{
-	margin : 1%;
+body , html{
+	margin : 0;
+	padding : 0;
 }
+.app{
+	margin-top:8vh;
 
+}
 .home-container{
-	text-align:center;	
+	text-align:center;
 }
 
 .bg-img img{
-	width : 25vw;
+	width : 35vh;
 	top : 50%;
 	left: 50%;
-
 }
-
-
-.top-home h1, .top-home h2,.top-home h3{
-	background:white;
-}
-
 
 .top-home{
 	font-size: 2em;
@@ -30,7 +27,11 @@ body{
 }
 
 .homeLink a{
-	color : black !important;
+	color : white !important;
+}
+
+.homeLink{
+	background : black;
 }
 
 .homeDiv div{
@@ -45,7 +46,20 @@ body{
 }
 
 .homeDiv li{
+	font-size:1.2em;
 	display:inline-block;
 	border-radius: 25px;
 	padding : 3%;
+}
+
+.homeDiv h1{
+	font-size:3rem;
+	font-weight:100;
+	text-transform: underline;
+}
+
+.homeDiv hr{
+	width : 25%;
+	size:40;
+	background:black;
 }
